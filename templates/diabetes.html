@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+        text-align: center;
+      }
+      #main2 {
+        text-align: left;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        
+      }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0; /* Add some margin for spacing */
+      }
+    </style>
+    <title>Predicted Disease</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <h1>{{prediction_text}}</h1>
+      <div id="main2">
+        <p>
+        <h2>Treatment </h2>
+Depending on what type of diabetes you have, blood sugar monitoring, insulin and oral drugs may be part of your treatment. Eating a healthy diet, staying at a healthy weight and getting regular physical activity also are important parts of managing diabetes.
+
+<h3>Treatments for All Types of Diabetes</h3>
+
+<p>
+  An important part of managing diabetes — as well as your overall health — is keeping a healthy weight through a healthy diet and exercise plan:
+</p>
+
+<p>
+  <b>Healthy Eating:</b> Your diabetes diet is simply a healthy-eating plan that will help you control your blood sugar. You'll need to focus your diet on more fruits, vegetables, lean proteins, and whole grains. These are foods that are high in nutrition and fiber and low in fat and calories. You'll also cut down on saturated fats, refined carbohydrates, and sweets. In fact, it's the best eating plan for the entire family. Sugary foods are OK once in a while, but they must be counted as part of your meal plan.
+</p>
+
+<p>
+  Understanding what and how much to eat can be a challenge. A registered dietitian can help you create a meal plan that fits your health goals, food preferences, and lifestyle. This will likely include carbohydrate counting, especially if you have type 1 diabetes or use insulin as part of your treatment.
+</p>
+
+<p>
+  <b>Physical Activity:</b> Everyone needs regular aerobic activity. This includes people who have diabetes. Physical activity lowers your blood sugar level by moving sugar into your cells, where it's used for energy. Physical activity also makes your body more sensitive to insulin, meaning your body needs less insulin to transport sugar to your cells.
+</p>
+
+<p>
+  Get your provider's OK to exercise. Then choose activities you enjoy, such as walking, swimming, or biking. What's most important is making physical activity part of your daily routine.
+</p>
+
+<p>
+  Aim for at least 30 minutes or more of moderate physical activity most days of the week, or at least 150 minutes of moderate physical activity a week. Bouts of activity can be a few minutes during the day. If you haven't been active for a while, start slowly and build up gradually. Also, avoid sitting for too long. Try to get up and move if you've been sitting for more than 30 minutes.
+</p>
+<div class="video-wrapper">
+  <iframe
+    width="746"
+    height="420"
+    src="https://www.youtube.com/embed/CwxStExoyGA"
+    title="Ask Mayo Clinic: Diabetes"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

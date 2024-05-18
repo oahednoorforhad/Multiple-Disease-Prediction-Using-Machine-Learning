@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul,
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+      }
+    </style>
+    <title>Book Store - About</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <div>
+        <img
+          width="800"
+          src="{{ url_for('static', filename='images/aboutus.jpg') }}"
+          alt="aboutus"
+        />
+      </div>
+      <div>
+        <h1>Our Journey</h1>
+        <p>
+          Our journey through this project has been an exciting adventure from
+          the get-go. Our main aim was to revolutionize disease prediction using
+          cutting-edge technology, and every step of the way has been a learning
+          experience. We encountered numerous hurdles, but each challenge only
+          fueled our determination to succeed. From the outset, our mission was
+          clear: harness the power of data and machine learning to transform how
+          diseases are predicted. We delved deep into the realm of data, sifting
+          through vast amounts of information to train our models. It was a
+          meticulous process, requiring attention to detail and a dash of
+          creativity. We experimented with different algorithms, fine-tuning
+          each one to perfection. But our journey wasn't just about algorithms
+          and numbers. It was about envisioning a future where healthcare is
+          proactive, personalized, and accessible to all. We aimed to empower
+          individuals with the knowledge to take charge of their health and
+          well-being. <br /><br />
+          Throughout our project, collaboration was key. We worked closely as a
+          team, pooling our diverse skills and expertise to overcome obstacles.
+          There were moments of frustration and setbacks, but we persevered,
+          knowing that our efforts would ultimately make a difference. As we
+          forged ahead, our commitment to our goal never wavered. We embraced
+          innovation, pushing the boundaries of what was possible. Our journey
+          was marked by breakthroughs and milestones, each one bringing us
+          closer to our vision of a healthier future. <br />
+          <br />Now, as we reflect on our journey, we are filled with pride at
+          how far we have come. Our project represents not just a technical
+          achievement but a testament to the power of collaboration,
+          determination, and a shared vision. And as we look to the future, we
+          are excited to continue our mission of using technology to transform
+          healthcare and improve lives.
+        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

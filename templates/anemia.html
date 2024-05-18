@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+        text-align: center;
+      }
+      #main2 {
+        text-align: left;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        
+      }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0; /* Add some margin for spacing */
+      }
+    </style>
+    <title>Predicted Disease</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <h1>{{prediction_text}}</h1>
+      <div id="main2">
+        <h2>Treatment</h2>
+    <p>Anemia treatment depends on the cause.</p>
+
+    <p><b>Iron deficiency anemia:</b> Treatment for this form of anemia usually involves taking iron supplements and changing the diet.</p>
+    <p>If the cause of iron deficiency is loss of blood, finding the source of the bleeding and stopping it is needed. This might involve surgery.</p>
+
+    <p><b>Vitamin deficiency anemias:</b> Treatment for folic acid and vitamin B-12 deficiency involves dietary supplements and increasing these nutrients in the diet.</p>
+    <p>People who have trouble absorbing vitamin B-12 from food might need vitamin B-12 shots. At first, the shots are every other day. In time, the shots will be just once a month, possibly for life.</p>
+
+    <p><b>Anemia of chronic disease:</b> Treatment for this type of anemia focuses on the disease that's causing it. If symptoms become severe, treatment might include getting blood, called a transfusion, or shots of a hormone called erythropoietin.</p>
+
+    <p><b>Anemias associated with bone marrow disease:</b> Treatment of these various diseases can include medicines, chemotherapy or getting bone marrow from a donor, called a transplant.</p>
+
+    <p><b>Aplastic anemia:</b> Treatment for this anemia can include blood transfusions to boost levels of red blood cells. A bone marrow transplant might be needed if bone marrow can't make healthy blood cells.</p>
+
+    <p><b>Hemolytic anemias:</b> Managing hemolytic anemias includes stopping medicines that might be causing it and treating infections. If the immune system is attacking red blood cells, treatment might involve taking medicines that lower immune system activity.</p>
+
+    <p><b>Sickle cell anemia:</b> Treatment might include oxygen, pain relievers, and hydration with fluids given through a vein, called intravenous, to reduce pain and prevent complications. Receiving blood, called a transfusion, and taking folic acid supplements and antibiotics might be involved.</p>
+    <p>A cancer drug called hydroxyurea (Droxia, Hydrea, Siklos) also is used to treat sickle cell anemia.</p>
+
+    <p><b>Thalassemia:</b> Most forms of thalassemia are mild and need no treatment. More-severe forms of thalassemia generally require blood transfusions, folic acid supplements, medicines, a blood and bone marrow stem cell transplant, or, rarely, removing the spleen.</p>
+  
+          
+<div class="video-wrapper">
+  <iframe width="746" height="420" src="https://www.youtube.com/embed/CLjszW4nSl4" title="Anemia | The Symptoms Meaning Causes Treatment Of Iron Deficiency Anemia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

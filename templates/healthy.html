@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+        text-align: center;
+      }
+      #main2 {
+        text-align: left;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        
+      }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0; /* Add some margin for spacing */
+      }
+    </style>
+    <title>Predicted Disease</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <h1>{{prediction_text}}</h1>
+      <div id="main2">
+        <h1>12 Tips for a Healthy Lifestyle</h1>
+    
+    <h3>Maintain a Healthy Weight</h3>
+    <p>A healthy weight can protect against high blood pressure, cholesterol, heart disease, and type 2 diabetes. Use tools like BMI and waist circumference, and consult with your doctor to determine your ideal weight.</p>
+    
+    <h3>Eat Nourishing Foods</h3>
+    <p>A balanced diet rich in fruits, vegetables, whole grains, lean proteins, and low-fat dairy provides essential vitamins, minerals, and fiber. This variety fuels your body and supports overall health.</p>
+    
+    <h3>Limit Processed Foods and Sugar</h3>
+    <p>Processed foods often contain high levels of calories, fats, salt, and sugars with fewer nutrients. Gradually replace these with whole foods to improve your diet and health.</p>
+    
+    <h3>Drink Water</h3>
+    <p>Staying hydrated is vital for digestion, energy, joint health, and heart function. Aim for 8-13 cups of water a day to keep your body functioning optimally.</p>
+    
+    <h3>Exercise Regularly</h3>
+    <p>Regular physical activity boosts mood, energy, muscle and bone strength, and aids in weight management. Aim for 150-300 minutes of moderate aerobic activity or 75 minutes of vigorous exercise weekly.</p>
+    
+    <h3>Reduce Sitting Time</h3>
+    <p>Prolonged sitting is linked to increased risks of heart disease, weight gain, and early death. Incorporate movement throughout your day to mitigate these risks.</p>
+    
+    <h3>Get Outdoors</h3>
+    <p>Spending time in nature can improve mental health, reduce stress, and increase happiness. Sunlight exposure also helps your body produce vitamin D.</p>
+    
+    <h3>Get Plenty of Sleep</h3>
+    <p>Sleep is crucial for maintaining bodily functions, repairing tissues, and processing information. Adults should aim for 7-9 hours of quality sleep each night to support overall health.</p>
+    
+    <h3>Limit Alcohol</h3>
+    <p>Moderate alcohol consumption is defined as up to one drink per day for women and up to two for men. Excessive drinking can have numerous negative health effects, so moderation is key.</p>
+    
+    <h3>Quit Smoking</h3>
+    <p>Smoking is a major risk factor for many diseases, including lung cancer and heart disease. Quitting can significantly improve your health and increase life expectancy.</p>
+    
+    <h3>Take a Multivitamin</h3>
+    <p>A daily multivitamin can help fill nutritional gaps, especially if you have dietary restrictions or deficiencies. However, it's best to focus on getting nutrients from food first.</p>
+    
+    <h3>Regular Health Checkups</h3>
+    <p>Routine medical and dental checkups can detect health issues early, making them easier to treat. Staying current with vaccinations and screenings is also important for preventive health care.</p>
+    
+    <h3>Takeaway</h3>
+    <p>Integrating these practices into your daily life can significantly enhance your physical and mental well-being, helping you lead a healthier, more fulfilling life.</p>
+          
+<div class="video-wrapper">
+  <iframe width="746" height="420" src="https://www.youtube.com/embed/Cg_GW7yhq20" title="Healthy Lifestyle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

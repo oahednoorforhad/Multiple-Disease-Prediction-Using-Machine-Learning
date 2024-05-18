@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+        text-align: center;
+      }
+      #main2 {
+        text-align: left;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        
+      }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0; /* Add some margin for spacing */
+      }
+    </style>
+    <title>Predicted Disease</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <h1>{{prediction_text}}</h1>
+      <div id="main2">
+        <h2>Treatment</h2>
+<p>
+  People with mild immune thrombocytopenia might need only regular platelet checks. Children usually improve without treatment. Most adults with ITP will need treatment at some point. The condition often gets worse or lasts long, also known as chronic.
+</p>
+<p>
+  Treatment might include medicines to increase platelet count or surgery to remove the spleen, known as a splenectomy. A health care provider can talk about the pros and cons of treatment options. Some people find the side effects of treatment are worse than the disease.
+</p>
+
+<h3>Medications</h3>
+<p>
+  Make sure your health care provider knows about medicines or supplements you take without a prescription. You might need to stop using any that might increase bleeding. Examples include aspirin, ibuprofen (Advil, Motrin IB, others), and ginkgo biloba.
+</p>
+<p>
+  Medicines to treat ITP may include:
+</p>
+<p>
+  <b>Steroids:</b> Health care providers often use an oral corticosteroid, such as prednisone. When the platelet count is back to a safe level, the provider can tell how to cut down the medicine a little at a time. Long-term use of these medicines can increase the risk of infections, high blood sugar, and osteoporosis.
+</p>
+<p>
+  <b>Immune globulin:</b> If corticosteroids don't work, a shot of immune globulin might help. This medicine also treats serious bleeding or quickly increases blood count before surgery. The effect usually wears off in a couple of weeks.
+</p>
+<p>
+  <b>Drugs that increase platelets:</b> Medicines such as romiplostim (Nplate), eltrombopag (Promacta), and avatrombopag (Doptelet) help bone marrow make more platelets. These types of medicines can increase the risk of blood clots.
+</p>
+<p>
+  <b>Other drugs:</b> Rituximab (Rituxan, Ruxience, Truxima) helps increase the platelet count by reducing the immune system response damaging them. But this medicine also can keep vaccinations from working well. Later surgery to remove the spleen might increase the need for the protection against illness that vaccinations give.
+</p>
+<p>
+  Fostamatinib (Tavalisse) is a newer drug approved for people with long-lasting ITP who haven't responded to other treatments.
+</p>
+
+          
+<div class="video-wrapper">
+  <iframe width="746" height="420" src="https://www.youtube.com/embed/axzDBOxk1-Q" title="Immune Thrombocytopenic Purpura (ITP) - Causes, Pathogenesis, Signs &amp; Symptoms, Diagnosis, Treatment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

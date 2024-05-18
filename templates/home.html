@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Starts -->
+    <style>
+      nav,
+      ul,
+      #banner,
+      .books {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      .books {
+        border-radius: 7px;
+        padding: 20px;
+        box-shadow: 1px 1px 7px gray;
+      }
+      footer,
+      #offer {
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        padding: 0px 100px 10px 100px;
+      }
+    </style>
+    <!-- Style ends -->
+    <title>Multiple Disease Prediction</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img width="80" height="80" src="{{ url_for('static', filename='images/logo.png') }}"  alt="logo" />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"><li>Disease Prediction</li></a>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+      <hr />
+      <!-- Banner starts -->
+      <section id="banner">
+        <div>
+          <i><h1>"Predicting Diseases for Better Health"</h1></i>
+          <p>
+            In healthcare, timely disease prediction is crucial for effective
+            treatment. Existing machine learning models focus on single
+            diseases, limiting their practicality in clinical settings. This
+            project introduces an AI system capable of predicting multiple
+            diseases simultaneously. By leveraging diverse datasets and advanced
+            ML algorithms, our system aims to provide clinicians with
+            comprehensive insights for proactive intervention and personalized
+            treatment planning. This initiative seeks to revolutionize disease
+            management by enhancing diagnostic accuracy and improving patient
+            outcomes.
+          </p>
+          <form action="{{ url_for('disease_prediction') }}" method="get">
+            <button type="submit">Predict Now</button>
+          </form>
+        </div>
+        <div>
+          <img width="600" src="{{ url_for('static', filename='images/ha_mascot.gif') }}"  alt="banner" />
+        </div>
+      </section>
+      <!-- Banner starts -->
+    </header>
+    <!-- Header ends -->
+    <!-- Main starts -->
+    <main>
+      <h1>Articles Available:</h1>
+      <!-- Book section starts -->
+      <div class="books">
+        <div>
+          <img width="250" src="{{ url_for('static', filename='images/diabetes.png') }}"  alt="" />
+        </div>
+        <div>
+          <h2>Worried About Diabetes??</h2>
+          <p>
+            Diabetes mellitus refers to a group of diseases that affect how the body uses blood sugar (glucose). Glucose is an important source of energy for the cells that make up the muscles and tissues. It's also the brain's main source of fuel. 
+            <br>The main cause of diabetes varies by type. But no matter what type of diabetes you have, it can lead to excess sugar in the blood. Too much sugar in the blood can lead to serious health problems.
+          </p>
+          <!-- <button><a href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444"></a>Read More</button> -->
+              <form action="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444">
+    <input type="submit" value="Read More" />
+</form>
+
+        </div>
+      </div>
+      <br /><br />
+      <div class="books">
+        <div>
+          <img width="250" src="{{ url_for('static', filename='images/Thelassemia.png') }}"  alt="" />
+        </div>
+        <div>
+          <h2>How to avoid Thelassemia in our life</h2>
+          <p>
+            Thalassemia (thal-uh-SEE-me-uh) is an inherited blood disorder that causes your body to have less hemoglobin than normal. Hemoglobin enables red blood cells to carry oxygen. Thalassemia can cause anemia, leaving you fatigued. <br>
+If you have mild thalassemia, you might not need treatment. But more severe forms might require regular blood transfusions. You can take steps to cope with fatigue, such as choosing a healthy diet and exercising regularly.
+          </p>
+          <!-- <button>Buy Now</button> -->
+          <form action="https://www.mayoclinic.org/diseases-conditions/thalassemia/symptoms-causes/syc-20354995">
+    <input type="submit" value="Read More" />
+</form>
+
+        </div>
+      </div>
+      <br /><br />
+      <div class="books">
+        <div>
+          <img width="250" height="300" src="{{ url_for('static', filename='images/anemia.jpg') }}" alt="" />
+        </div>
+        <div>
+          <h2>Be aware of Anemia!</h2>
+          <p>
+            Anemia is a problem of not having enough healthy red blood cells or hemoglobin to carry oxygen to the body's tissues. Hemoglobin is a protein found in red cells that carries oxygen from the lungs to all other organs in the body. Having anemia can cause tiredness, weakness and shortness of breath. <br>
+There are many forms of anemia. Each has its own cause. Anemia can be short term or long term. It can range from mild to severe. Anemia can be a warning sign of serious illness.
+          </p>
+          <!-- <button>Buy Now</button> -->
+          <form action="https://www.mayoclinic.org/diseases-conditions/anemia/symptoms-causes/syc-20351360">
+    <input type="submit" value="Read More" />
+</form>
+        </div>
+        <br /><br />
+      </div>
+      <br /><br />
+      <div class="books">
+        <div>
+          <img width="250" src="{{ url_for('static', filename='images/thromboc.png') }}" alt="" />
+        </div>
+        <div>
+          <h2>Thrombocytopenia is Dangerous!</h2>
+          <p>
+            Immune thrombocytopenia (ITP) is an illness that can lead to bruising and bleeding. Low levels of the cells that help blood clot, also known as platelets, most often cause the bleeding. <br>
+Once known as idiopathic thrombocytopenic purpura, ITP can cause purple bruises. It also can cause tiny reddish-purple dots on the skin that look like a rash. <br>
+Children can get ITP after a virus. They most often get better without treatment. In adults, the illness often lasts months or years.
+          </p>
+          <form action="https://www.mayoclinic.org/diseases-conditions/idiopathic-thrombocytopenic-purpura/symptoms-causes/syc-20352325">
+    <input type="submit" value="Read More" />
+</form>
+          <!-- <button>Buy Now</button> -->
+        </div>
+      </div>
+      <br /><br />
+      <div id="offer">
+        <!-- <div>
+          <h2>Special Offer!!</h2>
+          <img width="300" src="images/booksale.png" alt="" />
+        </div>
+      </div> -->
+
+      <!-- Movie section ends -->
+    </main>
+    <!-- Main ends -->
+    <br />
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img width="80" height="80" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer starts -->
+  </body>
+</html>

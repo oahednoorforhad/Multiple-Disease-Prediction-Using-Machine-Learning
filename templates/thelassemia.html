@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 0px 100px;
+        list-style: none;
+      }
+      footer {
+        margin: 0px 200px 0px 200px;
+        padding: 2%;
+        text-align: center;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      main {
+        gap: 60px;
+        text-align: center;
+      }
+      #main2 {
+        text-align: left;
+        width: 80%; /* Adjust as needed */
+        margin: 0 auto;
+        
+      }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0; /* Add some margin for spacing */
+      }
+    </style>
+    <title>Predicted Disease</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <h1>{{prediction_text}}</h1>
+      <div id="main2">
+        <p>
+          <h2>Treatment</h2>
+          <p>
+            Mild forms of thalassemia trait don't need treatment.
+          </p>
+          <p>
+            For moderate to severe thalassemia, treatments might include:
+          </p>
+          
+          <p>
+            <b>Frequent blood transfusions:</b> More severe forms of thalassemia often require frequent blood transfusions, possibly every few weeks. Over time, blood transfusions cause a buildup of iron in your blood, which can damage your heart, liver, and other organs.
+          </p>
+          
+          <p>
+            <b>Chelation therapy:</b> This is treatment to remove excess iron from your blood. Iron can build up as a result of regular transfusions. Some people with thalassemia who don't have regular transfusions can also develop excess iron. Removing the excess iron is vital for your health.
+          </p>
+          
+          <p>
+            To help rid your body of the extra iron, you might need to take an oral medication, such as deferasirox (Exjade, Jadenu) or deferiprone (Ferriprox). Another drug, deferoxamine (Desferal), is given by needle.
+          </p>
+          
+          <p>
+            <b>Stem cell transplant:</b> Also called a bone marrow transplant, a stem cell transplant might be an option in some cases. For children with severe thalassemia, it can eliminate the need for lifelong blood transfusions and drugs to control iron overload.
+          </p>
+          
+          <p>
+            This procedure involves receiving infusions of stem cells from a compatible donor, usually a sibling.
+          </p>
+          
+<div class="video-wrapper">
+  <iframe width="746" height="420" src="https://www.youtube.com/embed/th_GSpXFEp4" title="Thalassemia, Causes, Signs and Symptoms, Diagnosis and Treatment." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+        </p>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>

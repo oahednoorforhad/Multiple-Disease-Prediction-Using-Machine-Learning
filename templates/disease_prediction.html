@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Starts -->
+    <style>
+      nav,
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 100px 10px 100px;
+        list-style: none;
+      }
+      footer,
+      main {
+        padding: 10px 60px 10px 60px;
+        text-align: center;
+      }
+      #forms {
+        margin: auto;
+        width: 800px;
+        padding: 20px;
+        box-shadow: 1px 1px 7px gray;
+        border-radius: 7px;
+        text-align: center;
+      }
+      .form-group {
+        display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+      }
+      body {
+        font-size: larger;
+        font-family: Calibri;
+        background: #2980b9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffffff,
+          #6dd5fa,
+          #2980b9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      @media screen and (max-width: 1080px) {
+        nav,
+        ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+        #forms {
+          width: 300px;
+        }
+      }
+      .input .form-group {
+        text-align: left; /* Align the input areas to the left */
+      }
+    </style>
+    <!-- Style ends -->
+    <title>Multiple Disease Prediction</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header>
+      <!-- Nav starts -->
+      <nav>
+        <div>
+          <img
+            width="80"
+            height="80"
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <ul>
+            <a href="{{ url_for('home') }}"><li>Home</li></a>
+            <a href="{{ url_for('disease_prediction') }}"
+              ><li>Disease Prediction</li></a
+            >
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav ends -->
+    </header>
+    <!-- Header ends -->
+    <hr />
+    <!-- Main starts -->
+    <main>
+      <div id="forms">
+        <h1>Prediction</h1>
+        <hr />
+
+        <form action="{{url_for('predict')}}" method="post">
+          <div class="login">
+            <h1>Multiple Disease Prediction</h1>
+            <form action="{{url_for('predict')}}" method="post">
+              <div class="form-group">
+                <label for="glucose">Glucose: </label>
+                <input
+                  type="text"
+                  id="glucose"
+                  name="Glucose"
+                  placeholder="Glucose"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cholesterol">Cholesterol: </label>
+                <input
+                  type="text"
+                  id="cholesterol"
+                  name="Cholesterol"
+                  placeholder="Cholesterol"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hemoglobin">Hemoglobin: </label>
+                <input
+                  type="text"
+                  id="hemoglobin"
+                  name="Hemoglobin"
+                  placeholder="Hemoglobin"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="platelets">Platelets: </label>
+                <input
+                  type="text"
+                  id="platelets"
+                  name="Platelets"
+                  placeholder="Platelets"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="wbc">WBC: </label>
+                <input
+                  type="text"
+                  id="wbc"
+                  name="White Blood Cells"
+                  placeholder="White Blood Cells"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="rbc">RBC: </label>
+                <input
+                  type="text"
+                  id="rbc"
+                  name="Red Blood Cells"
+                  placeholder="Red Blood Cells"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hematocrit">Hematocrit: </label>
+                <input
+                  type="text"
+                  id="hematocrit"
+                  name="Hematocrit"
+                  placeholder="Hematocrit"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mcv">MCV: </label>
+                <input
+                  type="text"
+                  id="mcv"
+                  name="Mean Corpuscular Volume"
+                  placeholder="Mean Corpuscular Volume"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mch">MCH: </label>
+                <input
+                  type="text"
+                  id="mch"
+                  name="Mean Corpuscular Hemoglobin"
+                  placeholder="Mean Corpuscular Hemoglobin"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mchc">MCHC: </label>
+                <input
+                  type="text"
+                  id="mchc"
+                  name="Mean Corpuscular Hemoglobin Concentration"
+                  placeholder="Mean Corpuscular Hemoglobin Concentration"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="insulin">Insulin: </label>
+                <input
+                  type="text"
+                  id="insulin"
+                  name="Insulin"
+                  placeholder="Insulin"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="bmi">BMI: </label>
+                <input
+                  type="text"
+                  id="bmi"
+                  name="BMI"
+                  placeholder="BMI"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="systolic_bp">SBP: </label>
+                <input
+                  type="text"
+                  id="systolic_bp"
+                  name="Systolic Blood Pressure"
+                  placeholder="Systolic Blood Pressure"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="diastolic_bp">DBP: </label>
+                <input
+                  type="text"
+                  id="diastolic_bp"
+                  name="Diastolic Blood Pressure"
+                  placeholder="Diastolic Blood Pressure"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="triglycerides">Triglycerides: </label>
+                <input
+                  type="text"
+                  id="triglycerides"
+                  name="Triglycerides"
+                  placeholder="Triglycerides"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hba1c">HbA1c: </label>
+                <input
+                  type="text"
+                  id="hba1c"
+                  name="HbA1c"
+                  placeholder="HbA1c"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ldl_chol">LDL Cholesterol: </label>
+                <input
+                  type="text"
+                  id="ldl_chol"
+                  name="LDL Cholesterol"
+                  placeholder="LDL Cholesterol"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="hdl_chol">HDL Cholesterol: </label>
+                <input
+                  type="text"
+                  id="hdl_chol"
+                  name="HDL Cholesterol"
+                  placeholder="HDL Cholesterol"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="alt">ALT: </label>
+                <input
+                  type="text"
+                  id="alt"
+                  name="ALT"
+                  placeholder="ALT"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ast">AST: </label>
+                <input
+                  type="text"
+                  id="ast"
+                  name="AST"
+                  placeholder="AST"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="heart_rate">Heart Rate: </label>
+                <input
+                  type="text"
+                  id="heart_rate"
+                  name="Heart Rate"
+                  placeholder="Heart Rate"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="creatinine">Creatinine: </label>
+                <input
+                  type="text"
+                  id="creatinine"
+                  name="Creatinine"
+                  placeholder="Creatinine"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="troponin">Troponin: </label>
+                <input
+                  type="text"
+                  id="troponin"
+                  name="Troponin"
+                  placeholder="Troponin"
+                  required="required"
+                />
+              </div>
+              <div class="form-group">
+                <label for="crp">C-reactive Protein: </label>
+                <input
+                  type="text"
+                  id="crp"
+                  name="C-reactive Protein"
+                  placeholder="C-reactive Protein"
+                  required="required"
+                />
+              </div>
+              <button type="submit">Predict</button>
+              <br />
+            </form>
+            <br />
+            <div>{{prediction_text}}</div>
+            <br />
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="message">Message: </label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              cols="30"
+              placeholder="Enter your message"
+            ></textarea>
+          </div> -->
+          <!-- <div class="form-group">
+            <label for="agreed">
+              Do you agree to our terms and conditions?
+            </label>
+            <input type="checkbox" id="agreed" name="agreed" value="Boat" />
+          </div> -->
+          <!-- <input type="submit" value="Submit" /> -->
+        </form>
+      </div>
+    </main>
+    <!-- Main ends -->
+    <!-- Footer starts -->
+    <footer>
+      <div>
+        <img
+          width="80"
+          height="80"
+          src="{{ url_for('static', filename='images/logo.png') }}"
+          alt="logo"
+        />
+      </div>
+      <div>
+        <p>All Rights Reserved @Higher Authority 2024</p>
+      </div>
+    </footer>
+    <!-- Footer ends -->
+  </body>
+</html>
